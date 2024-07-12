@@ -62,6 +62,24 @@ class pizza {
             $this->status = "livré";
         }
     }
+        // methode guetter
+        
+    public function getIngredients(){
+        return $this->ingredient1.','.$this->ingredient2.','.$this->ingredient3;
+    }
+
+    public function getBase(){
+        return $this->base;
+    }
+
+    public function getSize(){
+        return $this->size;
+    }
+
+    public function getPrice(){
+        return $this->price;
+    }
+
 
 
 }
@@ -77,3 +95,23 @@ $pizzaYass->ship();
 
 // affichage
 var_dump($pizzaYass);
+
+
+$pizzaGet = new pizza('m','blache', 'poulet', 'champignon','aubergine');
+
+?>
+
+
+  <!-- affichage avec getter -->
+
+<p><?php echo $pizzaGet->getSize();?></p>
+<p><?php echo $pizzaGet->getBase();?></p>
+<p> <?php echo $pizzaGet->getIngredients(); ?> </p>
+<p><?php echo $pizzaGet->getPrice();?></p>
+
+
+
+
+
+
+
