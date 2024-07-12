@@ -63,7 +63,7 @@ class pizza {
         }
     }
         // methode guetter
-        
+
     public function getIngredients(){
         return $this->ingredient1.','.$this->ingredient2.','.$this->ingredient3;
     }
@@ -78,6 +78,10 @@ class pizza {
 
     public function getPrice(){
         return $this->price;
+    }
+
+    public function getOrderedAt(){
+        return $this->orderedAt->format('d/m/Y - H:i:s');
     }
 
 
@@ -108,6 +112,7 @@ $pizzaGet = new pizza('m','blache', 'poulet', 'champignon','aubergine');
 <p><?php echo $pizzaGet->getBase();?></p>
 <p> <?php echo $pizzaGet->getIngredients(); ?> </p>
 <p><?php echo $pizzaGet->getPrice();?></p>
+<p><?php echo $pizzaGet->getOrderedAt();?></p>
 
 
 
