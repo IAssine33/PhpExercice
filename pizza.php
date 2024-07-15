@@ -1,13 +1,10 @@
 
+<?php require_once("./meal.php") ?>
+
 <?php
-class pizza {
-
-    private $size;
-
-    private $price;
+class pizza extends meal{
 
     private $base;
-
 
     private $ingredient1;
 
@@ -16,9 +13,6 @@ class pizza {
     private $ingredient3;
 
 
-    private $status;
-
-    private $orderedAt;
 
     // ?partie  methode constructeur 
     function __construct($size, $base, $ingredient1, $ingredient2, $ingredient3){
@@ -48,20 +42,7 @@ class pizza {
     }
 
 
-    // la fonction de livraison de paiment
-    public function pay() {
-
-        if ($this->status === "En cours de commande"){
-            $this->status = "payé";
-        }
-    }
-
-    // la fonction de livraison
-    public function ship(){
-        if ($this->status === "payé"){
-            $this->status = "livré";
-        }
-    }
+   
         // methode guetter
 
     public function getIngredients(){
